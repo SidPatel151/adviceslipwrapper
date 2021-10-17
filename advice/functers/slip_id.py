@@ -19,9 +19,9 @@ class Slip_id(Base):
     res = Sessione.get(f"https://api.adviceslip.com/advice/{slip_id}", params=q)
     for i in res:
       s.append(i)
-    print(s)
 
     for v in s:
+      v = str(v).replace('b', ' ').replace("'", '')
       print(v)
     
 t = Slip_id()
