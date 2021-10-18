@@ -1,7 +1,7 @@
 import feedparser 
 import datetime 
-from .constants import * 
 import functools 
+from advice.errors import * 
 
 
 def call(func):
@@ -53,11 +53,11 @@ class Parser:
     elif self.loop.lower() == 'off':
       return self.parsersfact()
     else:
-      raise StringError
+      raise Stringerror
     
 
 
 t = Parser()
 
-t.parsefacts('on')
+t.parsefacts()
 

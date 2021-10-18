@@ -31,6 +31,8 @@ class Url:
             print('failed to connect')
   
   def requestrandomurl(self):
+    '''
+    No arguments, this will return any random slip_id'''
     S = rq.Session()
     status = self.status()
     if status:

@@ -13,6 +13,10 @@ class Search(Base):
     print(res)
 
   def search_times(self, total_res: int = 1, search: str = 'spiders'):
+    '''
+    total_res: int: defaults to 1 for the many times it will be called
+    search: str = spiders(the starting query for the search)
+    If the string doesn\'t exist or total_res has an int larger than the value it needs it will deploy a kepypagerror'''
     
     S = requests.Session()
     url = f'{BASE_URL}/search/{search}'
