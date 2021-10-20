@@ -1,2 +1,1 @@
-My api wrapper isn't done yet, so you will see many shit things, but feel free to use it. Please don't steal any of the code and use it for your github, or I will make a plagarism 
-lawsuit on you. This is for the advice slip JSON API. 
+My api wrapper is almost finished. Well, I finished the sync part, just need to add async, the code isn't the best, I didn't use the callback function. If anyone wants to use this code with a callback feel free to do so, if you jsut plain up copy this code, I will not be happy. If there is anyone who can improve this Thank you. 
