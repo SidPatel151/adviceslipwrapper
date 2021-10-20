@@ -5,18 +5,18 @@ from advice.constants import BASE_URL
 
 
 class Url:
-  def __init__(self):
+  # def __init__(self):
 
-    self.base_url = BASE_URL
-    self.headers = {'content-type': 'application/json'}
+  #   self.base_url = BASE_URL
+  #   self.headers = {'content-type': 'application/json'}
 
 
-  def base_url(self):
-    return self.base_url
+  # def base_url(self):
+  #   return self.base_url <- Saldy none of this code works..
 
   def status(self):
         try:
-                response = rq.head(self.base_url)
+                response = rq.head(BASE_URL)
                 # print(response.status_code)
 
                 if response.status_code >= 500:
@@ -33,15 +33,16 @@ class Url:
   def requestrandomurl(self):
     '''
     No arguments, this will return any random slip_id'''
+    headers = {'content-type': 'application/json'}
     S = rq.Session()
     status = self.status()
     if status:
-      res = S.get(self.base_url, headers=self.headers).json()
+      res = S.get(BASE_URL, headers=headers).json()
       print(res)
     else:
       raise NotRecognizable('404')
 
 
-t = Url()
+# t = Url()
 
-t.requestrandomurl()
+# t.requestrandomurl()

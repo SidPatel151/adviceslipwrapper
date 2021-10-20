@@ -26,9 +26,8 @@ class Slip_id(Base):
 
     for v in s:
       v = str(v).replace('b', ' ').replace("'", '')
-      print('Session')
-      print(v)
+      return print(v)
     
-t = Slip_id()
+# t = Slip_id()
 
-t.get_id(0)
+# t.get_id(0)

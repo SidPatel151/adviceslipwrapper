@@ -2,6 +2,7 @@ import feedparser
 import datetime 
 import functools 
 from advice.errors import * 
+from .base import *
 
 
 def call(func):
@@ -22,17 +23,20 @@ def call(func):
     return timer_wrapper
 
 
-class Parser:
-  def __init__(self):
-    self.base_Url = feedparser.parse('https://api.adviceslip.com/daily_adviceslip.rss')
-    self.entry = self.base_Url.entries
+class Parser(Base):
+  # def __init__(self):
+  #   self.base_Url = feedparser.parse('https://api.adviceslip.com/daily_adviceslip.rss')
+  #   self.entry = self.base_Url.entries <- doesnt work with the client file idk y 
   
-  # for i in range(2):
   @call
   def parsersfact(self):
 
-      if self.entry:
-          l = self.entry[0]
+      base_url = feedparser.parse('https://api.adviceslip.com/daily_adviceslip.rss')
+
+      entry = base_url.entries
+
+      if entry:
+          l = entry[0]
           values = l.values()
           list_vals = list(values)
 
@@ -57,7 +61,7 @@ class Parser:
     
 
 
-t = Parser()
+# t = Parser()
 
-t.parsefacts()
+# t.parsefacts()
 

@@ -1,5 +1,4 @@
-from advice.functers import url
-from advice.functers import search
-from advice.functers import slip_id
-from advice.functers import readrss
-
+from examples.searchtest import *
+from examples.parsertest import * 
+from examples.slip_id_test import * 
+from examples.urlTest import * 

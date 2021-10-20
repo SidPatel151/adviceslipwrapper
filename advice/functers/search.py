@@ -10,7 +10,7 @@ class Search(Base):
     S = requests.Session()
     url = f'{BASE_URL}/search/{query}'
     res = S.get(url).json()
-    print(res)
+    return print(res)
 
   def search_times(self, total_res: int = 1, search: str = 'spiders'):
     '''
@@ -33,7 +33,7 @@ class Search(Base):
         print(res['slips'][n]['advice'])
         # return res['slips'][n]['advice']
 
-t = Search()
+# t = Search()
 
-t.get_all_search()
-t.search_times()
+# t.get_all_search()
+# t.search_times()
